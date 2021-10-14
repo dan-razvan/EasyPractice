@@ -1,0 +1,33 @@
+
+
+<script>
+
+    // This for loop will find the highest number in the array
+    // first it will compare the number at index 0 with the number at index 1 (5 with -5). If it decides that 5 > -5,
+    // it will assign the value 5 to x, and it will move 5 to index 1.
+    // The second cycle starts and now it will compare number 5 at index 1 with number 4 at index 2. Since number 5 > 4,
+    // it will assign the value 5 again to x and it will move number 5 to position 3(index 2). 
+    // Next it will compare number 5 at position 3 with number 11 at position 4(index 3). Since 5 < 11, the condition stated in the if 
+    // statement (if(numbers[j] > numbers[j+1]) is false and therefore it will not move number 5 to position 4.
+    // Next the loop will compare number 11 at position 4, with number 8 at position 5(index 4). Since 11 > 8, it will move 11 
+    // to position 5 and it will assign 11 to x.
+
+    // Final step. The loop stops because i = 4 and the condition for the loop to keep going was that i should be < 5.
+    // It will then jump to console.log(x) and console.log(numbers). it should print 11 and then it should print [5, 5, 5, 11, 11].
+    // I included console.log(numbers) so you can see what happened with the array. 
+
+let numbers = [5, -5, 4, 11, 8]
+
+let x=0;
+
+for(let i = 0; i < numbers.length; j++){
+   if(numbers[j] > numbers[j+1]) {
+     x=numbers[j]
+     numbers[j+1] = numbers[j]
+   }
+}
+
+    console.log(x)
+    console.log(numbers)
+
+</script>
